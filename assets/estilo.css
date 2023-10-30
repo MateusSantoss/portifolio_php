@@ -1,0 +1,172 @@
+/*personlaizações gerais*/
+:root {
+	--font-dorada-color:  rgb(189, 189, 140);
+	
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	color: white;
+	background: black;
+}
+
+body {
+	
+	font-family: 'Courier New', monospace;
+	/*background: url(imagens/GWqs.gif);*/
+	background: url(imagens/J4o.gif) ;
+	
+	
+}
+
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	padding: 5px;
+}
+/*personlaizações gerais*/
+
+/*header*/
+header {
+
+    background: black;
+	
+	margin-bottom: 10px;
+}
+
+header {
+	
+	background: rgba(0, 0, 0, 0);
+	background: url(imagens/o3h.gif)  center;
+	
+	
+
+	background-color: rgba(52, 0, 93, 0.2) 1;
+	
+	background-size: 100%;
+	opacity: 0.9;
+
+}
+
+
+
+header p {
+	font-style: italic;
+	
+}
+
+header h1.topo {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 9rem;
+}
+
+
+
+#icones div a img:hover {
+	opacity: 0.8;
+	
+}
+
+
+a img {
+	margin-top: 30px;
+}
+
+#conteudo {
+	
+	
+	/*opacity: 0.9;*/
+}
+
+#apresentacao {
+	
+	font-style: italic;
+	margin-top: 10px;
+	color:  rgb(189, 189, 140);
+
+}
+/*./header*/
+
+
+
+
+
+
+/*projetos*/
+
+
+
+/*./projetos*/
+.card {
+	
+	padding: 10px;
+    background-color: black;
+	border: 1px solid rgb(155, 155, 139);
+}
+
+.card p {
+	color:  var(--font-dorada-color);
+}
+
+
+
+#conteudo h5 {
+	color: #f2d01b;
+}
+.projeto {
+	
+}
+
+
+
+
+
+
+
+
+section a.nav-link {
+	color: var(--font-dorada-color);
+	
+}
+
+
+
+/*footer./*/
+#eu {
+	border-radius: 100px;
+
+}
+
+#sobre {
+	
+	color:  var(--font-dorada-color);
+	
+	
+}
+
+
+#topo_footer {
+	background: url(imagens/galaxy.gif);
+	
+	
+}
+
+#footer .card-body {
+	background: black;
+}
+/*./footer*/
+
+
+
+ /*div.icones img {
+  width: 30px;
+  height: 30px;
+}*/
+
+
+
