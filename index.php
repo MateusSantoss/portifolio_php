@@ -7,9 +7,14 @@
    $senha = '';
    
    
+   
    try {
 	   $conexao = new PDO($dsn, $usuario, $senha);
-	   $query = 'select * from tb_projetos';
+	   $query = 'select * from tb_portifolio order by id desc';
+	   $query2 = 'select * from resumo';
+	   
+
+	   
 	  
        
 	   
@@ -58,49 +63,7 @@
   		</div>
 		<!-- topo-->
 		
-  		<div class="container mx-5 " id="icones"><!--icones-->
-			<div class=" d-flex flex-row justify-content-around  mx-6" style="margin-left: 30px;">
-				  <div class="col-md-3 col-4" >
-
-					  <a href="https://github.com/MateusSantoss">
-						  <img class="col-1 col-md-2 img img-fluid" src="assets/imagens/github.png"  alt="github">
-					  </a>
-
-					 <a href="https://www.linkedin.com/in/mateussantos-dev/">
-						 <img class="col-1 col-md-2 img img-fluid" src="assets/imagens/linkedin.png" alt="linkedin" >
-					 </a>
-
-					 
-
-				  </div>
-
-				  <div class="col-md-3 col-4" >
-
-					  <a href="#">
-						  <img class="col-1 col-md-2 img img-fluid" src="assets/imagens/html-5.png"  alt="html">
-					  </a>
-
-					 <a href="https://www.linkedin.com/in/mateussantos-dev/">
-						 <img class="col-1 col-md-2 img img-fluid" src="assets/imagens/css-3.png" alt="css" >
-					 </a>
-
-					 <a href="#">
-						<img class="col-1 col-md-2 img img-fluid" src="assets/imagens/js.png" alt="js" >
-					</a>
-
-					<a href="#">
-						<img class="col-1 col-md-2 img img-fluid" src="assets/imagens/mysql.png" alt="mysql" >
-
-					</a>
-
-					<a href="#">
-						<img class="col-1 col-md-2 img img-fluid" src="assets/imagens/php.png" alt="curriculo" >
-					</a>
-
-				  </div>
-			</div>
-  		</div><!--./icones-->
-  	
+  		
   		
   	</header>
 
@@ -111,7 +74,7 @@
 		<h1 class="row justify-content-center">Projetos</h1>
 
 		  <?php 
-		  foreach($conexao->query($query) as $value => $valor) {
+		  foreach($conexao->query($query) as $valor) {
 		 
 		 ?>
 		  <div class="row projeto"><!--projeto-->
@@ -143,6 +106,13 @@
 
 	</div>
     <!--seção de projetos-->
+	<?php 
+	foreach($conexao->query($query2) as $resumo) {
+
+	
+	
+	?>
+	
     
     	
 
@@ -150,13 +120,12 @@
 		<div class="card mb-3 mt-5 col-12 col-md-12 col-lg-12" ><!--projeto-->
 			<div class="row g-0 " id="topo_footer">
 			  <div class="col-md-4 col-4" >
-				<img src="assets/imagens/eu.png" width="100" height="100" class="img-fluid " alt="Minha foto" id="eu">
+				<img src="<?= $resumo['img']?>" width="100" height="100" class="img-fluid " alt="Minha foto" id="eu">
 			  </div>
 			  <div class="col-md-12 col-12">
 				<div class="card-body" id="sobre">
-				  <h5 class="card-title display-4">SOBRE</h5>
-				  <cite class="">Em março de 2022 tive o meu primeiro contato com a programação escrevendo os primeiro algoritimos em python, em outubro do mesmo ano encontrei a minha paixão no desenolvimento web, desde
-					então sigo estudando de maneira intensa.
+				  <h5 class="card-title display-4"><?= $resumo['titulo']?></h5>
+				  <cite class=""><?= $resumo['resumo']?>
 				  </cite>
                     <hr>
 					<h1 class="row justify-content-center">contato</h1>
@@ -164,13 +133,13 @@
 					<div class="row justify-content-center">
 						<div class="col-6">
 							
-						<p>telefone: (75)997122910</p>
+						<p>telefone: <?= $resumo['telefone']?></p>
 
 						</div>
 
 						<div class="col-6">
 							
-						<p>email: msjt098@gmail.com</p>
+						<p class="clipboard">email: <?= $resumo['email']?></p>
 
 						</div>
 
@@ -180,6 +149,16 @@
 
 							<a href="https://www.facebook.com/profile.php?id=100009637780064" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/facebook.png">
 							</img></a>
+
+							<a href="https://www.linkedin.com/in/mateussantos-dev/" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/linkedin.png">
+							</img></a>
+
+							<a href="https://github.com/MateusSantoss" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/github.png">
+							</img></a>
+
+							<a href="https://wa.me/5575997122910" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/whatsapp_733585.png">
+							</img></a>
+							
 						</div>
 						</div>
 
@@ -192,6 +171,7 @@
 			  </div>
 			</div>
 		  </div><!--./projeto-->
+		  <?php }?>
 
   		
   

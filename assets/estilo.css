@@ -69,8 +69,11 @@ header h1.topo {
 
 #icones div a img:hover {
 	opacity: 0.8;
+
 	
 }
+
+
 
 
 a img {
@@ -82,6 +85,7 @@ a img {
 	
 	/*opacity: 0.9;*/
 }
+
 
 #apresentacao {
 	

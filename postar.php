@@ -8,6 +8,44 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
+
+<?php 
+#cria uma conexão com banco de dados
+$dsn = 'mysql:host=sql211.infinityfree.com;dbname=if0_35335029_portifolio';
+$usuario = 'if0_35335029';
+$senha = 'o3e4zDB0Lr';
+
+
+try {
+  $conexao = new PDO($dsn, $usuario, $senha);
+  $query = 'select * from usuario';
+   
+  
+ 
+    
+  
+
+  
+}
+
+ catch(PDOException $e) {
+  echo "Erro".$e->getCode(). 'Mensagem: '.$e->getMessage ();
+  
+}
+
+?>
+
+<?php  
+foreach ($conexao->query($query) as $values => $users) {
+     $email = $users['email'];
+     $senha = $users['senha'];
+   };
+
+   if ($email == $_POST['email'] && $senha == $_POST['senha']) {
+
+   
+?>
+
 <form class="container" method="POST" action="postagem.php">
   <div class="mb-3 col-12">
     <label for="text" class="form-label">titulo</label>
@@ -32,6 +70,12 @@
  
   <button type="submit" class="btn btn-primary" >Submit</button>
 </form>
+<?php } 
+else 
+  echo "<h1>usuario não autorizado</h1>";
+
+
+?>
 
 </body>
 </html>
