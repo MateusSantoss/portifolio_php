@@ -52,14 +52,11 @@
   <body >
 
   	
-  	<header class="row justify-content-center img img-fluid">
+  	<header class="row justify-content-center img img-fluid ">
 
-  		<div class="col-md-8 col-lg-8 col-xxl-5 col-8 justify-content-center topo">
-  			<img class="img img-fluid mt-5 mx-auto" src="assets/imagens/Logotipo Mateus.png" id="logo"> 
-  			</img>
-
-  		
-  				
+  		<div class="col-md-8 col-lg-8 col-xxl-5 col-8 justify-content-center">
+  			<img class="img img-fluid mt-5 mx-auto bg-transparent" src="../assets/imagens/Logotipo Mateus.png" id="logo"> 
+  			</img>		
   		</div>
 		<!-- topo-->
 		
@@ -72,34 +69,41 @@
 		
   	<section class="container-fluid text-center">
 		<h1 class="row justify-content-center">Projetos</h1>
-
+         <div class="row ">
 		  <?php 
 		  foreach($conexao->query($query) as $valor) {
 		 
 		 ?>
-		  <div class="row projeto"><!--projeto-->
-			<div class="card  col-md-5 mb-3">
-				<div class="card-body">
-				  <h5 class="card-title"><?= $valor['titulo']?></h5>
-				  <p><?= $valor['descricao']?></p>
-				  <a href="<?=$valor['linkPagina']?>" class="nav-link">Ver página</a>
+		
+			<div class="col-12 col-md-6" id="projetos"><!--projeto-->
+			<a href="<?=$valor['linkPagina']?>" class="nav-link">
+				<div>
+					<div>
+						<div class="card-body">
+							<h5 class="card-title"><?= $valor['titulo']?></h5>
+							<p><?= $valor['descricao']?></p>
+						</div>
+					</div>
+					<div class="card mb-4">
+						<div class="">
+							<img src="<?=$valor['linkImg']?>" class="img-fluid img img-card" alt="...">
+						</div>
+					</div>
+
+				</div>
+			</a>
 				
-				 
-				</div>
-			  </div>
-			<div class="card mb-3 col-md-">
-				<div class="">
-					<img src="<?=$valor['linkImg']?>" class="img-fluid img img-card" alt="...">
-				</div>
-			  </div>
 
-			  
-		  </div><!--./projeto-->
+				
+			</div><!--./projeto-->
 
-		  <?php 
-		  } 
-		 
-		 ?>
+			<?php 
+			} 
+			
+			?>
+
+			</div>
+		
 
   		
   	</section>
@@ -144,19 +148,19 @@
 						</div>
 
 						<div class="row">
-							<a href="https://www.instagram.com/mateuss5150/" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/instagram.png">
+							<a href="https://www.instagram.com/mateuss5150/" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="../assets/imagens/instagram.png">
 							</img></a>
 
-							<a href="https://www.facebook.com/profile.php?id=100009637780064" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/facebook.png">
+							<a href="https://www.facebook.com/profile.php?id=100009637780064" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="../assets/imagens/facebook.png">
 							</img></a>
 
-							<a href="https://www.linkedin.com/in/mateussantos-dev/" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/linkedin.png">
+							<a href="https://www.linkedin.com/in/mateussantos-dev/" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="../assets/imagens/linkedin.png">
 							</img></a>
 
-							<a href="https://github.com/MateusSantoss" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/github.png">
+							<a href="https://github.com/MateusSantoss" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="../assets/imagens/github.png">
 							</img></a>
 
-							<a href="https://wa.me/5575997122910" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="assets/imagens/whatsapp_733585.png">
+							<a href="https://wa.me/5575997122910" class="col-2 col-md-1 col-lg-1 col-xl-1"><img class="img img-fluid" src="../assets/imagens/whatsapp_733585.png">
 							</img></a>
 							
 						</div>

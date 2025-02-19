@@ -10,16 +10,50 @@
 body {
 	color: white;
 	background: black;
+	
 }
+
+
 
 body {
 	
 	font-family: 'Courier New', monospace;
 	/*background: url(imagens/GWqs.gif);*/
-	background: url(imagens/J4o.gif) ;
+	background: url(imagens/J4o.gif);
+	
 	
 	
 }
+
+@keyframes fadeInFadeOut {
+	5%   {opacity: 0.1;}
+	15% {opacity: 0.2;}
+	25%  {opacity: 0.3;}
+	30% {opacity: 0.4;}
+	35%  {opacity: 0.5;}
+	40% {opacity: 0.6;}
+	45% {opacity: 0.7;}
+	50% {opacity: 0.8;}
+	55%  {opacity: 0.9;}
+	60% {opacity: 1;}
+	65% {opacity: 0.9;}
+	70% {opacity: 0.8;}
+	75% {opacity: 0.7;}
+	80% {opacity: 0.6;}
+	85% {opacity: 0.5;}
+	90% {opacity: 0.4;}
+	95% {opacity: 0.3;}
+	100% {opacity: 0.2;}
+	
+
+  }
+
+  #logo {
+	animation-name: fadeInFadeOut;
+	animation-duration: 5s;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+  }
 
 
 a {
@@ -80,11 +114,7 @@ a img {
 	margin-top: 30px;
 }
 
-#conteudo {
-	
-	
-	/*opacity: 0.9;*/
-}
+
 
 
 #apresentacao {
@@ -122,18 +152,18 @@ a img {
 #conteudo h5 {
 	color: #f2d01b;
 }
-.projeto {
+
+#projetos:hover {
+	opacity: 0.8;
+	position: relative;
+	top: 2px;
 	
 }
 
 
 
 
-
-
-
-
-section a.nav-link {
+#projetos  {
 	color: var(--font-dorada-color);
 	
 }
